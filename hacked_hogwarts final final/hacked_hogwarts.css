@@ -1,0 +1,223 @@
+/* ___________general stuff_____________ */
+
+body{
+    background-color: #464169;
+    font-family: 'IM Fell Great Primer SC', serif;
+}
+
+h1{
+    color: #baae54;
+    
+}
+h2{
+    color: #baae54;
+}
+
+.list_container{
+    color: #3f6044;
+    background-color: #f2eac6;
+}
+
+#sorting{
+    cursor: pointer;
+}
+
+
+/* ___________overskrift_____________ */
+
+.overskrift_grid{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align: center;
+    
+}
+.overskrift_grid h1{
+    margin: 70px 0 0 0; 
+}
+.overskrift_grid h2{
+    margin: 0 0 150px 0; 
+}
+
+
+
+
+/* ___________filter buttons _____________ */
+.filter_container{
+ display: grid;
+ grid-template-columns: 2fr;
+
+}
+
+.filter_container h2{
+    margin: 0px ;
+}
+
+.house_filter_grid{
+    margin: 0 0 20px 50px;
+    
+}
+
+.enrollment_filter_grid{
+   grid-column-start: 2;
+   margin: 0 100px 20px 0;
+
+}
+
+
+
+.list_container{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#list{
+    margin: 0 40px 0 40px;
+    
+}
+
+#sorting{
+    color: #d5c2a3;
+    text-align: left;
+}
+
+/* ___________house buttons_____________ */
+#all_houses_style{
+    font-family: 'IM Fell Great Primer SC', serif;
+    background-color: #533912;
+    color: white;
+    border: solid 5px #9f7235;
+    border-style: ridge;
+    padding: 4px;  
+}
+#gryffindor_style{
+    font-family: 'IM Fell Great Primer SC', serif;
+    background-color: #9f2929;
+    color: white;
+    border: solid 5px #9f7235;
+    border-style: ridge;
+    padding: 4px;  
+}
+
+#ravenclaw_style{
+    font-family: 'IM Fell Great Primer SC', serif;
+    background-color: #29699f;
+    color: white;
+    border: solid 5px #9f7235;
+    border-style: ridge;
+    padding: 4px;  
+}
+#hufflepuff_style{
+    font-family: 'IM Fell Great Primer SC', serif;
+    background-color: #d0c327;
+    color: white;
+    border: solid 5px #9f7235;
+    border-style: ridge;
+    padding: 4px;  
+}
+#slytherin_style{
+    font-family: 'IM Fell Great Primer SC', serif;
+    background-color: #248324;
+    color: white;
+    border: solid 5px #9f7235;
+    border-style: ridge;
+    padding: 4px;  
+}
+
+
+/* ___________popup_____________ */
+.filter-button{
+    font-family: 'IM Fell Great Primer SC', serif;
+    background-color: #21b019;
+    color: white;
+    border: solid 5px #9f7235;
+    border-style: ridge;
+    padding: 4px;  
+}
+
+
+#popup {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #popup article {
+    width: 80%;
+    background-color: #e4d3b1;
+  }
+
+  .name_and_house{
+    text-align: center;
+  } 
+
+  .name_and_house p{
+    font-size: 23px;
+  } 
+
+  #popup_article{
+    border: solid 10px;
+    border-color: #29699f;
+    color: #533912;
+  }
+
+  #popup_article h2{
+   color: #533912;
+  }
+
+  #details_button{
+    padding: 1px;
+    margin: 1px;
+    background-color: #533912;
+    color: white;
+    border: solid 3px #9f7235;
+    border-style: ridge;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+
+  }
+
+  /* _____________search button____________ */
+
+
+
+ #student_search, #search_button{
+    width: 150px;
+    margin: 5px;  
+}
+
+/* ____________counter_________________ */
+
+.stats_container{
+    display: flex;
+    flex-direction: row;
+    background-color: #e4d3b1;
+    margin: 0 1rem 1rem 1rem;
+    padding: 1rem;
+} 
+
+.list_container{
+    margin: 0;
+}
+
+.search_container{
+    order: 2;
+}
+
+
+.counter_container p{
+    margin: 0;
+}
+
+.counter_container ul{
+    column-count: 2;
+    column-gap: 110px;
+} 

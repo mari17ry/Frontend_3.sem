@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts Student List</title>
+    <link rel="stylesheet" href="hacked_hogwarts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+  <div class="overskrift_grid">
+
+    <h1>Hogwarts School of Witchcraft and Wizardry</h1>
+    <hr width="50%" color="#baae54">
+    <h2>Administrative Quarters</h2>
+
+  </div>
+    
+  <div class="filter_container"> 
+
+   <div class="house_filter_grid">
+
+    <h2>Filter students by:</h2>
+     <h2>Houses</h2>
+     <div id="filter-buttons">
+     <button class="filter-button" id= "all_houses_style" data-action="filter" data-filter="all">All houses</button>
+     <button class="filter-button" id= "gryffindor_style" data-action="filter" data-filter="Gryffindor">Gryffindor</button>
+     <button class="filter-button" id= "ravenclaw_style" data-action="filter" data-filter="Ravenclaw">Ravenclaw</button>
+     <button class="filter-button" id= "hufflepuff_style" data-action="filter" data-filter="Hufflepuff">Hufflepuff</button>
+     <button class="filter-button" id= "slytherin_style" data-action="filter" data-filter="Slytherin">Slytherin</button>
+   </div>
+   </div>
+
+  <div class="enrollment_filter_grid">
+     <h2>Or:</h2>
+     <h2>Enrollment status</h2>
+     <button class="filter-button" data-action="filter" data-filter="Enrolled">Enrolled</button>
+     <button class="filter-button" data-action="filter" data-filter="Expelled">Expelled</button>
+     <button class="filter-button" data-action="filter" data-filter="all">All Students</button>
+  </div>
+
+
+
+  </div>
+</div>
+    
+
+    
+
+  <div class= "list_container">
+
+    <h2>hogwarts stats:</h2>
+
+    
+    <div class="stats_container">
+  
+      <div class="search_container">
+        <label for="student_search">Student search:</label>
+      <input type="search" id="student_search" name="q">
+      <button id="search_button">Search</button> 
+     <ul id="results"></ul> 
+      
+      </div>
+  
+    <div class="counter_container">
+     
+      <ul>
+      <p id="enrolledNumber"></p>
+      <p id="expelledNumber"></p>
+      <p id="currentlyShownNumber"></p>
+      <p id="prefectNumber"></p>
+      <p id="gryffindorNumber"></p>
+      <p id="ravenclawNumber"></p>
+      <p id="HufflepuffNumber"></p>
+      <p id="slytherinNumber"></p>
+      
+      </ul>
+    </div>
+
+  </div> 
+  
+
+    <table id="list">
+      <thead>
+        <tr id = "sorting"> 
+
+          <th data-action="sort" data-sort-direction="asc" data-sort="firstName">first</th> 
+          <th data-action="sort" data-sort-direction="asc" data-sort="middleName">middle</th> 
+          <!-- <th data-action="sort" data-sort-direction="asc" data-sort="nickName">nickname</th>  -->
+          <th data-action="sort" data-sort-direction="asc" data-sort="lastName">last</th> 
+          <th data-action="sort" data-sort-direction="asc" data-sort="house">house</th> 
+          <th data-action="sort" data-sort-direction="asc" data-sort="gender">gender</th> 
+          <th data-action="sort" data-sort-direction="asc" data-sort="expell">enrollment</th> 
+          <th data-action="sort" data-sort-direction="asc" data-sort="prefect">prefect</th> 
+          <th data-action="sort" data-sort-direction="asc" data-sort="details"></th> 
+         
+        </tr>
+      </thead>
+      <tbody>
+        <!-- table body = array info i table data (td)-->
+        
+      </tbody>
+    </table>
+  </list_container>
+
+
+<!-- DATAFIELDS TIL ARRAYET-->
+    <template id="students">
+      <tr>
+
+        
+        <td data-field="firstName">first name</td>
+        <td data-field="middleName">middle name</td>
+        <!-- <td data-field="nickName">nickname</td> -->
+        <!-- vil kun have nickname på popup'en -->
+        <td data-field="lastName">last name</td>
+        <td data-field="house">house</td>
+        <td data-field="gender">gender</td>
+        <!-- <td data-field="image"> <img id="picture" src=""> </td> -->
+        <td data-field="expell">⭐️</td>
+        <td data-field="prefect">x</td>
+        <td data-field="Details" id="details_button">Details</td>
+      </tr>
+    </template>
+
+    <!-- modalpopop'en. skal ikke klones og kan derfor være id -->
+    <div id="popup">
+      <article id="popup_article">
+        <button id="closePopup">X</button>
+        
+
+        <div class="name_and_house">
+          <h2>Student name: </h2>
+          <p id="house"></p>
+        </div>
+        <p id="gender"></p>
+        <p id="prefect"></p>
+        <p id="expelled"></p>
+        <p id="inquis"></p>
+        <p id="bloodstatus"></p>
+        <p id="student_id"></p>
+        <img id="student_id_img" src="" alt="">
+
+      </article>
+    </div>
+<!-- DATAFIELDS TIL ARRAYET-->
+
+    <script src="hacked_hogwarts.js"></script>
+</body>
+</html>
